@@ -19,11 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pdi-Na-AsJ">
-                                <rect key="frame" x="17" y="167" width="250" height="300"/>
+                                <rect key="frame" x="82" y="298" width="250" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-5G-NzA">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="timerLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="8SC-y0-7s3"/>
                                         </constraints>
@@ -31,8 +32,18 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-WJ-mo5">
+                                        <rect key="frame" x="0.0" y="70" width="250" height="160"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="spaceForTextLabel"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="Aqf-pX-7fm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-FZ-zKd">
-                                        <rect key="frame" x="0.0" y="70" width="250" height="230"/>
+                                        <rect key="frame" x="0.0" y="230" width="250" height="70"/>
                                         <color key="backgroundColor" red="0.53856918344428284" green="0.83339106189417955" blue="0.55135001992602817" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="4SM-G6-7am"/>
@@ -45,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skE-5g-4Vy">
-                                        <rect key="frame" x="0.0" y="170" width="250" height="70"/>
+                                        <rect key="frame" x="0.0" y="230" width="250" height="70"/>
                                         <color key="backgroundColor" red="0.83339106190000001" green="0.43359043590000002" blue="0.4397776498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="UZD-UI-KkB"/>
@@ -62,8 +73,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="4xQ-iS-ZIK"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="skE-5g-4Vy" secondAttribute="bottom" id="IGY-UA-iti"/>
-                                    <constraint firstItem="Dfb-FZ-zKd" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="100" id="Z8n-xw-9UG"/>
-                                    <constraint firstItem="skE-5g-4Vy" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="100" id="jAz-uh-Exs"/>
+                                    <constraint firstItem="Dfb-FZ-zKd" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="160" id="Z8n-xw-9UG"/>
+                                    <constraint firstItem="skE-5g-4Vy" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="160" id="jAz-uh-Exs"/>
                                     <constraint firstAttribute="height" constant="300" id="jGA-Wx-sEE"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="Dfb-FZ-zKd" secondAttribute="bottom" id="jH3-Sd-CyI"/>
                                     <constraint firstItem="6Ws-5G-NzA" firstAttribute="top" secondItem="pdi-Na-AsJ" secondAttribute="topMargin" id="ngX-P7-kte"/>
@@ -79,6 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="spaceForTextLabel" destination="f7y-WJ-mo5" id="BhF-R6-h4d"/>
                         <outlet property="startButton" destination="Dfb-FZ-zKd" id="ncN-wy-sRO"/>
                         <outlet property="stopButton" destination="skE-5g-4Vy" id="U1A-Gm-b9p"/>
                         <outlet property="timerLabel" destination="6Ws-5G-NzA" id="UZg-qq-hMq"/>
