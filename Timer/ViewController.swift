@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     var timer = Timer()
     
-    @IBOutlet weak var timerLabel: UILabel!
+    
+    @IBOutlet weak var minTimerLabel: UILabel!
+    @IBOutlet weak var secTimerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var spaceForTextLabel: UILabel!
@@ -21,6 +23,9 @@ class ViewController: UIViewController {
     @IBAction func startPressed(_ sender: Any) {
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerUpdate), userInfo: NSDate(), repeats: true)
+        
+        secTimerLabel.text = "0"
+        minTimerLabel.text = ""
         
         startButton.isHidden = true
         stopButton.isHidden = false
@@ -41,11 +46,12 @@ class ViewController: UIViewController {
          let passed = -(self.timer.userInfo as! NSDate).timeIntervalSinceNow
         
         if passed < 60 {
-            print("sec counting started")
-            timerLabel.text = passed < 10 ? String(format: "0%.0f s", passed) : String(format: "%.0f s", passed)
+            
+            secTimerLabel.text = String(format: "\(format(value: Int(passed)))", passed)
         } else {
-            print("min counting started")
-            timerLabel.text = String(format: "\(format(value: Int(passed/60))) m : \(format(value: Int(passed.truncatingRemainder(dividingBy: 60)))) s", passed/60, passed.truncatingRemainder(dividingBy: 60))
+            
+            minTimerLabel.text = String(format: " \(format(value: Int(passed/60))):", passed/60)
+            secTimerLabel.text = String(format: "\(format(value: Int(passed.truncatingRemainder(dividingBy: 60))))", passed.truncatingRemainder(dividingBy: 60))
             
         }
         
