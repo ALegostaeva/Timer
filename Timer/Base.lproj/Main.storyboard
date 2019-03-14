@@ -18,22 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pdi-Na-AsJ">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pdi-Na-AsJ">
+                                <rect key="frame" x="82" y="263" width="350" height="585"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-5G-NzA">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9a-yY-YRZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="205"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="timerLabel"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="minTimerLabel"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="8SC-y0-7s3"/>
+                                            <constraint firstAttribute="height" constant="200" id="zJF-KD-E4v"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="180"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-5G-NzA" userLabel="Sec Timer Label">
+                                        <rect key="frame" x="0.0" y="205" width="350" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secTimerLabel"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="8SC-y0-7s3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="180"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-WJ-mo5">
-                                        <rect key="frame" x="0.0" y="70" width="250" height="160"/>
+                                        <rect key="frame" x="0.0" y="355" width="350" height="160"/>
                                         <accessibility key="accessibilityConfiguration" identifier="spaceForTextLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="Aqf-pX-7fm"/>
@@ -43,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-FZ-zKd">
-                                        <rect key="frame" x="0.0" y="230" width="250" height="70"/>
+                                        <rect key="frame" x="0.0" y="515" width="350" height="70"/>
                                         <color key="backgroundColor" red="0.53856918344428284" green="0.83339106189417955" blue="0.55135001992602817" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="4SM-G6-7am"/>
@@ -56,7 +67,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skE-5g-4Vy">
-                                        <rect key="frame" x="0.0" y="230" width="250" height="70"/>
+                                        <rect key="frame" x="0.0" y="515" width="350" height="70"/>
                                         <color key="backgroundColor" red="0.83339106190000001" green="0.43359043590000002" blue="0.4397776498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="UZD-UI-KkB"/>
@@ -71,29 +82,29 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="4xQ-iS-ZIK"/>
+                                    <constraint firstAttribute="width" constant="350" id="4xQ-iS-ZIK"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="skE-5g-4Vy" secondAttribute="bottom" id="IGY-UA-iti"/>
-                                    <constraint firstItem="Dfb-FZ-zKd" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="160" id="Z8n-xw-9UG"/>
-                                    <constraint firstItem="skE-5g-4Vy" firstAttribute="top" secondItem="6Ws-5G-NzA" secondAttribute="bottom" constant="160" id="jAz-uh-Exs"/>
-                                    <constraint firstAttribute="height" constant="300" id="jGA-Wx-sEE"/>
+                                    <constraint firstAttribute="height" constant="585" id="jGA-Wx-sEE"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="Dfb-FZ-zKd" secondAttribute="bottom" id="jH3-Sd-CyI"/>
-                                    <constraint firstItem="6Ws-5G-NzA" firstAttribute="top" secondItem="pdi-Na-AsJ" secondAttribute="topMargin" id="ngX-P7-kte"/>
+                                    <constraint firstItem="6Ws-5G-NzA" firstAttribute="top" secondItem="m9a-yY-YRZ" secondAttribute="bottom" constant="5" id="kwL-tz-FPo"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Vae-9v-E4e"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="m9a-yY-YRZ" firstAttribute="top" secondItem="pdi-Na-AsJ" secondAttribute="top" id="Gnq-rT-5Tq"/>
                             <constraint firstItem="pdi-Na-AsJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ue3-nZ-MS6"/>
                             <constraint firstItem="pdi-Na-AsJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fMC-if-lIf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="minTimerLabel" destination="m9a-yY-YRZ" id="TfM-v8-whB"/>
+                        <outlet property="secTimerLabel" destination="6Ws-5G-NzA" id="r0m-RO-PN0"/>
                         <outlet property="spaceForTextLabel" destination="f7y-WJ-mo5" id="BhF-R6-h4d"/>
                         <outlet property="startButton" destination="Dfb-FZ-zKd" id="ncN-wy-sRO"/>
                         <outlet property="stopButton" destination="skE-5g-4Vy" id="U1A-Gm-b9p"/>
-                        <outlet property="timerLabel" destination="6Ws-5G-NzA" id="UZg-qq-hMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
